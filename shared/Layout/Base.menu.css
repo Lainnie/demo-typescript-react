@@ -1,0 +1,95 @@
+.univers {
+  width: 100%;
+  height: 100%;
+}
+
+.layout-connected {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-connected,
+.layout-connected .menu,
+.layout-connected .page {
+  height: 100%;
+}
+
+.layout-connected .wrapper-demeter {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.layout-connected .wrapper-demeter-logo {
+  margin: 13px;
+  margin-top: 16px;
+  flex: 0 1 auto;
+}
+
+.layout-connected .menu.expanded .wrapper-demeter-logo {
+  text-align: left;
+  margin: 13px 0 30px 22px;
+}
+
+.layout-connected .wrapper-demeter-buttons-navigation {
+  flex: 1 1 auto;
+}
+
+.layout-connected .wrapper-demeter-buttons-settings {
+  flex: 0 1 40px;
+  padding-bottom: 10px;
+}
+
+.layout-connected .menu.expanded {
+  width: 260px;
+}
+
+.layout-connected .menu demeter-with-tooltip {
+  --color-fill: #cccccc;
+  --tooltip-display: block;
+  text-transform: capitalize;
+}
+
+.layout-connected .menu demeter-menu-button {
+  cursor: pointer;
+}
+
+.layout-connected .menu.expanded demeter-menu-button {
+  --padding-wrapper-menu-button: 0 0 0 22px;
+}
+
+.layout-connected .menu demeter-avatar {
+  --avatar-padding: 6px 0 0 0;
+  color: white;
+}
+
+.layout-connected .menu.expanded demeter-avatar {
+  --avatar-height: 30px;
+  --avatar-width: 30px;
+}
+
+.layout-connected .menu.expanded demeter-large-logo {
+  --logo-height: 40px;
+  --logo-padding: 0;
+  display: inline-block;
+  width: 132px;
+}
+
+.layout-connected .menu.collapsed {
+  width: 60px;
+}
+
+.layout-connected .menu.collapsed demeter-avatar {
+  --avatar-height: 30px;
+  --avatar-width: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.layout-connected .menu.collapsed demeter-logo {
+  --logo-display: block;
+}
+
+.layout-connected .page {
+  width: 100%;
+}

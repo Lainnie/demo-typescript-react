@@ -1,0 +1,37 @@
+.layout-connected .area-menu {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
+  padding-right: 70px;
+  color: #454545;
+}
+
+.layout-connected .area-menu .area-menu-item {
+  margin-left: 70px;
+  text-align: center;
+  line-height: 14px;
+}
+
+.layout-connected .area-menu .area-menu-item .item-text {
+  margin: 0;
+  cursor: pointer;
+}
+
+.univers.supply .layout-connected .area-menu .area-menu-item .item-active {
+  color: var(--color-supplyUniverse-tertiary);
+}
+
+.univers.demand .layout-connected .area-menu .area-menu-item .item-active {
+  color: var(--color-demandUniverse-tertiary);
+}
+
+.layout-connected .area-menu .area-menu-item .item-active {
+  font-size: 5px;
+  line-height: 5px;
+  color: #454545;
+  visibility: hidden;
+}
+
+.layout-connected .area-menu .area-menu-item.active .item-active {
+  visibility: visible;
+}

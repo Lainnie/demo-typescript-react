@@ -1,0 +1,12 @@
+.data-table {
+}
+
+.data-table-menu {
+  width: 200px;
+  height: 400px;
+
+  position: absolute;
+  display: none;
+
+  background-color: white;
+}

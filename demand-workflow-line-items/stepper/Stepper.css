@@ -1,0 +1,46 @@
+.layout-connected .stepper-wrapper {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .stepper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+.layout-connected .step-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.layout-connected .stepper .step {
+  text-align: center;
+}
+
+.layout-connected .stepper .step .step-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.layout-connected .stepper .step .step-separator {
+  position: absolute;
+  background-color: #c2d6e3;
+  height: 1px;
+  top: 15px;
+  left: 50%;
+  width: 100%;
+}
+
+.layout-connected .stepper .step .step-separator-last {
+  position: unset;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+}
+
+.layout-connected .stepper .step p {
+  margin: 0;
+  padding: 0;
+}

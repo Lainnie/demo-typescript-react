@@ -1,0 +1,37 @@
+.layout-connected .line-item-general {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .line-item-general .inputs {
+  display: grid;
+  grid-gap: calc(var(--grid-gap-size) * 3);
+  grid-template-columns: repeat(3, var(--grid-column-size));
+  padding-bottom: 35px;
+}
+
+.layout-connected .input-period {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: relative;
+}
+
+.layout-connected .input-period .date {
+  width: 100%;
+}
+
+.layout-connected .input-period .fal {
+  font-size: 20px;
+  margin: 0 15px;
+}
+
+.layout-connected .input-period .react-calendar {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 62px;
+}
+
+.layout-connected .input-period.active .react-calendar {
+  display: block;
+}

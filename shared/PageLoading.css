@@ -1,0 +1,40 @@
+.layout-connected .page .page-loading {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fit, 120px);
+}
+
+.layout-connected .page-loading .blur {
+  grid-column: 1 / 6;
+  grid-row: 1 / last-line;
+
+  filter: blur(4px);
+  --webkit-filter: blur(4px);
+  z-index: 1;
+}
+
+.layout-connected .page-loading .blur demeter-global-spinner {
+  --global-spinner-width: 100%;
+  --global-spinner-height: 100%;
+}
+
+.layout-connected .page-loading .loader {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+
+  padding-top: 15px;
+  text-align: center;
+  color: #848484;
+  background-color: white;
+  z-index: 10;
+}
+
+.layout-connected .loader {
+}
+
+.layout-connected .page-loading .loader demeter-global-spinner {
+  --global-spinner-width: 210px;
+  --global-spinner-height: 100px;
+}

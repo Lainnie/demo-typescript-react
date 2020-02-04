@@ -1,0 +1,27 @@
+.supply-administration-formats .exclusion-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.supply-administration-formats .exclusion-selector > div {
+  flex: 1;
+}
+
+.supply-administration-formats .format-selector label {
+  display: block;
+}
+
+.supply-administration-formats .container-general,
+.supply-administration-formats .content > p {
+  grid-column: 1 / 7;
+}
+
+.supply-administration-formats .container-general .data-table {
+  margin-top: 20px;
+}
+
+.supply-administration-formats .dropdownComp {
+  padding-left: 0;
+  padding-right: 0;
+}

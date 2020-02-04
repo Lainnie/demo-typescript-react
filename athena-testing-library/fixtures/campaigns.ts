@@ -1,0 +1,52 @@
+export const campaign = {
+  account_id: null,
+  updated_at: null,
+  id: 'a5e4bdb7-4150-4640-83c8-9ec61c8cca3f',
+  country: 'FR',
+  name: 'My other campaign',
+  archived: false,
+  brands: [
+    'd3e5100d-cb9e-4a27-9cda-1756a6fd1707',
+    'fb2cb896-9018-41bf-a3ac-9520f2050dc8',
+  ],
+  line_items: [],
+  created_at: '2019-01-28T09:55:10.117799+00:00',
+  global_budget: 1000,
+  user_id: 'e2447ccd-879c-4f71-b615-1aba803f3734',
+  toppings: null,
+};
+
+export const campaignList = [
+  campaign,
+  {
+    account_id: null,
+    updated_at: null,
+    id: '6c33c194-c990-48ea-a450-6ca60d157371',
+    country: 'FR',
+    name: 'mycampaign',
+    archived: false,
+    brands: [
+      'd3e5100d-cb9e-4a27-9cda-1756a6fd1707',
+      'fb2cb896-9018-41bf-a3ac-9520f2050dc8',
+    ],
+    line_items: [],
+    created_at: '2019-01-27T23:36:41.917922+00:00',
+    global_budget: 0,
+    user_id: 'e2447ccd-879c-4f71-b615-1aba803f3734',
+    toppings: null,
+  },
+  {
+    account_id: null,
+    updated_at: null,
+    id: '1dd22062-1bd1-4d2c-ba04-f01a041e4349',
+    country: 'FR',
+    name: 'my second campaigns',
+    archived: false,
+    brands: ['2bfea137-b090-4210-a07d-340e11ee8e3c'],
+    line_items: [],
+    created_at: '2019-01-28T00:42:47.973882+00:00',
+    global_budget: 0,
+    user_id: 'e2447ccd-879c-4f71-b615-1aba803f3734',
+    toppings: null,
+  },
+];

@@ -1,0 +1,30 @@
+---
+name: ShelvesProductsTree
+route: /demand-administration/ShelvesProductsTree
+menu: Demand Administration
+---
+
+import { Playground } from 'docz';
+import ShelvesProductsTree from './ShelvesProductsTree.tsx';
+import spriteTree from './sprite-tree.mock.json';
+
+# Demand Administration => ShelvesProductsTree
+
+## Description
+
+Displays a tree of products and shelves from a given brand
+
+
+## Playground
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  }}
+>
+  <ShelvesProductsTree
+    tree={spriteTree}
+  />
+</Playground>

@@ -1,0 +1,20 @@
+.layout-connected .line-item-products {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .line-item-products .products {
+  margin-top: 20px;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--grid-gap-size);
+}
+
+.layout-connected .line-item-products .inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.layout-connected .line-item-products demeter-cartridge-item {
+  --color-icon: var(--color-demandUniverse-primary);
+}

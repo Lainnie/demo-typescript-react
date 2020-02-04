@@ -1,0 +1,19 @@
+.layout-connected .demand-campaigns {
+  height: 100%;
+}
+
+.layout-connected .demand-campaigns .container-general {
+  --padding-horizontal: 0;
+  --padding-hori: 0;
+  --padding-verti: 0;
+  --label-margin: 0;
+  --color-label: var(--color-demandUniverse-primary);
+
+  padding-top: 0;
+  grid-column: 1 / 7;
+}
+
+.layout-connected .demand-campaigns .container-general .area-title,
+.layout-connected .demand-campaigns .container-general p {
+  padding-left: var(--grid-gap-size);
+}

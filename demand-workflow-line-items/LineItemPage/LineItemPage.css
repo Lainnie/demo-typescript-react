@@ -1,0 +1,31 @@
+/*
+ * ─── LINEITEMPAGE COMPONENT ─────────────────────────────────────────────────────
+ */
+
+.LineItemPage-content .custom-title {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 7;
+  grid-row: 1 / 2;
+  align-items: baseline;
+}
+
+.LineItemPage-content .custom-title > a,
+.LineItemPage-content .custom-title > a:focus,
+.LineItemPage-content .custom-title > a:active,
+.LineItemPage-content .custom-title > a:visited,
+.LineItemPage-content .custom-title > a:link {
+  font-size: var(--font-size-default);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+
+.LineItemPage-content .inner-validation {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+}
+

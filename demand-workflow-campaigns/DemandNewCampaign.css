@@ -1,0 +1,35 @@
+.layout-connected .demand-new-campaign .line-item-listing {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .demand-new-campaign .line-item-listing .button-actions {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: var(--grid-gap-size);
+}
+
+.layout-connected
+  .demand-new-campaign
+  .line-item-listing
+  .button-actions
+  demeter-button:first-child {
+  grid-column: 3 / 4;
+  padding-right: var(--grid-gap-size);
+}
+
+.layout-connected
+  .demand-new-campaign
+  .line-item-listing
+  .button-actions
+  demeter-button:last-child {
+  grid-column: 4 / 5;
+  padding-left: var(--grid-gap-size);
+}
+
+.layout-connected .page .demand-new-campaign .inner-validation {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

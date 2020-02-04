@@ -1,0 +1,10 @@
+.layout-connected .lineItemFormats-root {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .lineItemFormats-root .checkboxList {
+  display: grid;
+  grid-gap: calc(var(--grid-gap-size) * 3);
+  grid-template-columns: repeat(5, var(--grid-column-size));
+  padding-bottom: 35px;
+}

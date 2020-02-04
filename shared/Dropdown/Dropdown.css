@@ -1,0 +1,245 @@
+.dropdownComp.modeForm {
+  --height-label: 23px;
+  --height-currentSelection: 36px;
+  --height-underline: 2px;
+}
+
+.dropdownComp.modeMenu {
+  --height-label: 0px;
+  --height-currentSelection: 30px;
+  --height-underline: 0px;
+}
+
+.dropdownComp {
+  position: relative;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'label label'
+    'currentselection currentselection'
+    'underline underline'
+    'helper helper'
+    'error error';
+  --color-label-default: var(--color-grey-4);
+  --color-label-disabled: var(--color-grey-1);
+  --color-label-error: var(--color-red-1);
+
+  --color-currentSelection-label-default: var(--color-grey-4);
+  --color-currentSelection-label-disabled: var(--color-grey-2);
+
+  --color-currentSelection-icon-default: var(--color-grey-1);
+  --color-currentSelection-icon-hover: var(--color-grey-2);
+  --color-currentSelection-icon-focused: var(--color-grey-2);
+  --color-currentSelection-icon-disabled: var(--color-grey-1);
+  --color-currentSelection-icon-error: var(--color-red-1);
+
+  --color-helper-default: var(--color-grey-3);
+  --color-helper-disabled: var(--color-grey-1);
+  --color-underline-default: var(--color-grey-5);
+  --color-underline-hover: var(--color-grey-6);
+  --color-underline-disabled: var(--color-grey-5);
+  --color-underline-error: var(--color-red-1);
+  --color-error-default: var(--color-grey-3);
+  --color-focused: var(--color-primary);
+  padding: 0px 5px;
+  cursor: pointer;
+}
+
+.dropdownComp.modeForm:focus,
+.dropdownComp.modeForm.open,
+.dropdownComp.modeMenu:focus,
+.dropdownComp.modeMenu.open {
+  outline: none;
+}
+
+/*
+    ───────────────────────────────────────────────────────────────────────────────────
+    -- ─── LABEL ──────────────────────────────────────────────────────────────────────
+    ───────────────────────────────────────────────────────────────────────────────────
+  */
+
+label {
+  grid-area: label;
+  font-size: 18px;
+  padding-bottom: 4px;
+}
+.dropdownComp.modeForm label {
+  display: block;
+}
+.dropdownComp.modeMenu label {
+  display: none;
+}
+
+.dropdownComp.isDisabled label {
+  color: var(--color-label-disabled);
+}
+
+.dropdownComp.isNotDisabled.withError label {
+  color: var(--color-label-error);
+}
+
+.dropdownComp.isNotDisabled.withoutError:focus label {
+  color: var(--color-focused);
+}
+
+.dropdownComp.isNotDisabled.withoutError:not(:focus):not(:hover) label,
+.dropdownComp.isNotDisabled.withoutError:hover:not(:focus) label {
+  color: var(--color-label-default);
+}
+
+/*
+  ───────────────────────────────────────────────────────────────────────────────────
+  -- ─── CURRENT SELECTION ──────────────────────────────────────────────────────────────────
+  ───────────────────────────────────────────────────────────────────────────────────
+  */
+.dropdownComp-currentSelection {
+  grid-area: currentselection;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+/* LABEL */
+.dropdownComp .dropdownComp-currentSelection span {
+  margin-right: 22px;
+}
+.dropdownComp.modeForm .dropdownComp-currentSelection span {
+  font-size: 18px;
+  font-weight: 500;
+}
+.dropdownComp.modeMenu .dropdownComp-currentSelection span {
+  font-size: 14px;
+}
+.dropdownComp.isNotDisabled .dropdownComp-currentSelection span {
+  color: var(--color-currentSelection-label-default);
+}
+.dropdownComp.isDisabled .dropdownComp-currentSelection span {
+  color: var(--color-currentSelection-label-disabled);
+}
+
+/* DOWN ARROW ICON */
+.dropdownComp.modeForm .dropdownComp-currentSelection .fal {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-currentSelection-icon-default);
+}
+.dropdownComp.isNotDisabled.withoutError:not(:focus):hover
+  .dropdownComp-currentSelection
+  .fal {
+  color: var(--color-currentSelection-icon-hover);
+}
+.dropdownComp.isNotDisabled.withoutError:focus
+  .dropdownComp-currentSelection
+  .fal {
+  color: var(--color-currentSelection-icon-foc.fald);
+}
+.dropdownComp.isNotDisabled.withError .dropdownComp-currentSelection .fal {
+  color: var(--color-currentSelection-icon-error);
+}
+.dropdownComp.isDisabled .dropdownComp-currentSelection .fal {
+  color: var(--color-currentSelection-icon-disabled);
+}
+
+/*
+    ───────────────────────────────────────────────────────────────────────────────────
+    -- ─── UNDERLINE ──────────────────────────────────────────────────────────────────
+    ───────────────────────────────────────────────────────────────────────────────────
+  */
+
+.dropdownComp-underline {
+  grid-area: underline;
+  height: 2px;
+}
+.dropdownComp.modeForm .dropdownComp-underline {
+  display: block;
+}
+.dropdownComp.modeMenu .dropdownComp-underline {
+  display: none;
+}
+
+.dropdownComp.isDisabled .dropdownComp-underline {
+  background-color: var(--color-underline-disabled);
+}
+
+.dropdownComp.isNotDisabled.withError .dropdownComp-underline {
+  background-color: var(--color-underline-error);
+}
+
+.dropdownComp.isNotDisabled.withoutError:focus .dropdownComp-underline {
+  background-color: var(--color-focused);
+}
+
+.dropdownComp.isNotDisabled.withoutError:not(:focus):not(:hover)
+  .dropdownComp-underline {
+  background-color: var(--color-underline-default);
+}
+
+.dropdownComp.isNotDisabled.withoutError:hover:not(:focus)
+  .dropdownComp-underline {
+  background-color: var(--color-underline-hover);
+}
+
+/*
+    ───────────────────────────────────────────────────────────────────────────────────
+    -- ─── ITEMS CONTAINER ──────────────────────────────────────────────────────────────────
+    ───────────────────────────────────────────────────────────────────────────────────
+  */
+.dropdownComp-itemListContainer {
+  position: absolute;
+  background-color: white;
+  border: solid 1px var(--color-grey-3-a30);
+  width: 100%;
+  z-index: 100;
+}
+.dropdownComp:not(.open) .dropdownComp-itemListContainer {
+  display: none;
+}
+.dropdownComp.open .dropdownComp-itemListContainer {
+  display: block;
+}
+
+.dropdownComp.modeForm .dropdownComp-itemListContainer {
+  bottom: -15px;
+}
+/*
+  ───────────────────────────────────────────────────────────────────────────────────
+  -- ─── HELPER ─────────────────────────────────────────────────────────────────────
+  ───────────────────────────────────────────────────────────────────────────────────
+  */
+
+.dropdownComp-helper {
+  grid-area: helper;
+  padding-top: 10px;
+  font-size: 0.9em;
+  height: 16px;
+}
+.dropdownComp.modeMenu .dropdownComp-helper {
+  display: none;
+}
+.dropdownComp.isNotDisabled .dropdownComp-helper {
+  color: var(--color-helper-default);
+}
+.dropdownComp.isDisabled .dropdownComp-helper {
+  color: var(--color-helper-disabled);
+}
+
+/*
+  ───────────────────────────────────────────────────────────────────────────────────
+  -- ─── ERROR ──────────────────────────────────────────────────────────────────────
+  ───────────────────────────────────────────────────────────────────────────────────
+  */
+
+.dropdownComp-error {
+  grid-area: error;
+  color: var(--color-error-default);
+  padding-top: 10px;
+  font-size: 0.9em;
+}
+.dropdownComp.modeMenu .dropdownComp-error {
+  display: none;
+}

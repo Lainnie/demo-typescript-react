@@ -1,0 +1,16 @@
+.dropdownItemComp {
+  background-color: white;
+  font-size: var(--font-size-default);
+  line-height: 25px;
+  padding: 4px 12px;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.dropdownItemComp:hover {
+  background-color: var(--color-grey-0);
+}
+.dropdownItemComp:focus {
+  background-color: var(--color-grey-0);
+  outline: none;
+}

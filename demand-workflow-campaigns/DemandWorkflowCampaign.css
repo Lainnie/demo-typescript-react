@@ -1,0 +1,7 @@
+.layout-connected .page .demand-workflow-campaigns .inner-validation {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

@@ -1,0 +1,11 @@
+.layout-connected .page .area-title {
+  grid-column: 1 / 7;
+  grid-row: 1 / 2;
+
+  height: fit-content;
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  padding: 0;
+}

@@ -1,0 +1,6 @@
+.shelvesProductsTreeComp {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  font-weight: 500;
+  color: var(--color-grey-3);
+}

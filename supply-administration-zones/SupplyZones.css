@@ -1,0 +1,104 @@
+.layout-connected .supplyzones demeter-container {
+  --container-background: white;
+  --label-margin: 0 0 20px 0;
+}
+
+.layout-connected .supplyzones .container-general {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .supplyzones .grid-content {
+  display: grid;
+  grid-gap: var(--grid-gap-size);
+  grid-template-columns: repeat(var(--grid-column-number), 1fr);
+
+  padding-bottom: 20px;
+}
+
+.layout-connected .supplyzones .link {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-connected .supplyzones .link p {
+  align-self: flex-start;
+}
+
+.layout-connected .supplyzones .link demeter-button {
+  align-self: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.layout-connected .supplyzones .column-1-3 {
+  grid-column: 1 / 3;
+}
+
+.layout-connected .supplyzones .column-1-7 {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .supplyzones .column-3-5 {
+  grid-column: 3 / 5;
+}
+
+.layout-connected .supplyzones .column-5-7 {
+  grid-column: 5 / 7;
+}
+
+.layout-connected .supplyzones .information {
+  margin-top: 1em;
+  color: #454545;
+}
+
+.layout-connected .supplyzones table {
+  width: 100%;
+}
+
+.layout-connected .supplyzones tr {
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'zones activation guarantee noGuarantee cousins cousins';
+  margin: 0;
+  height: 3em;
+  line-height: 3em;
+}
+
+.layout-connected .supplyzones .thead {
+  border-bottom: solid #b7b7b7 1px;
+  border-top: solid #b7b7b7 1px;
+}
+
+.layout-connected .supplyzones .zones {
+  grid-area: zones;
+}
+
+.layout-connected .supplyzones .activation {
+  grid-area: activation;
+}
+
+.layout-connected .supplyzones .guarantee {
+  grid-area: guarantee;
+}
+
+.layout-connected .supplyzones .noGuarantee {
+  grid-area: noGuarantee;
+}
+
+.layout-connected .supplyzones .cousins {
+  grid-area: cousins;
+}
+
+.layout-connected .supplyzones th {
+  border-left: solid #b7b7b7 1px;
+  padding-left: 1em;
+}
+
+.layout-connected .supplyzones .first {
+  border-left: solid #b7b7b7 0px;
+}
+
+.layout-connected .supplyzones #subTitle {
+  font-size: 18px;
+}

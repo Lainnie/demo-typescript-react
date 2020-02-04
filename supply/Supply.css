@@ -1,0 +1,35 @@
+.univers.supply {
+  --color-primary: var(--color-supplyUniverse-primary);
+  --color-secondary: var(--color-supplyUniverse-secondary);
+}
+
+.univers.supply .layout-connected .menu {
+  flex-shrink: 0;
+}
+
+.univers.supply .layout-connected .menu demeter-wrapper-menu {
+  --color-gradient-top: var(--color-supplyUniverse-secondary);
+  --color-gradient-bottom: #4c0a25;
+  --color-tertiary: var(--color-supplyUniverse-tertiary);
+}
+
+.univers.supply .layout-connected .menu demeter-menu-button {
+  --menu-button-height: 53px;
+  --color-hover-menuButton: #760e38;
+}
+
+.univers.supply .layout-connected .column-1-3 {
+  grid-column: 1 / 3;
+}
+
+.univers.supply .layout-connected .column-1-7 {
+  grid-column: 1 / 7;
+}
+
+.univers.supply .layout-connected .column-3-5 {
+  grid-column: 3 / 5;
+}
+
+.univers.supply .layout-connected .column-5-7 {
+  grid-column: 5 / 7;
+}

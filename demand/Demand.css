@@ -1,0 +1,11 @@
+.univers.demand .layout-connected .menu {
+  flex-shrink: 0;
+  --color-gradient-top: var(--color-demandUniverse-secondary);
+  --color-gradient-bottom: #092333;
+  --color-tertiary: var(--color-demandUniverse-tertiary);
+}
+
+.univers.demand .layout-connected .menu demeter-menu-button {
+  --menu-button-height: 53px;
+  --color-hover-menuButton: var(--color-demandUniverse-secondary);
+}

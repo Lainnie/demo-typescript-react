@@ -1,0 +1,183 @@
+.login {
+  grid-area: login;
+  width: 100%;
+  height: 100%;
+  font-size: 0.7em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.login demeter-container {
+  --container-background: white;
+}
+
+.login .content {
+  grid-area: content;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.login .content-check {
+  grid-area: content;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    '... ... ...'
+    '... ... ...'
+    'title title title'
+    '... ... ...'
+    '... ... ...'
+    '... button ...';
+}
+
+.login .content-loading {
+  grid-area: content;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    '... ... ...'
+    '... ... ...'
+    '... title ...'
+    '... ... ...'
+    '... button ...';
+}
+
+/* center the loader in the login container */
+.login .content-loading demeter-global-spinner {
+  display: inline-block;
+  margin: 2em 0;
+  height: 85px;
+  width: 200px;
+}
+
+.login .connect {
+  grid-template-areas:
+    'title title title'
+    'loginerror loginerror loginerror'
+    'log log log'
+    '... ... ...'
+    'pwd pwd pwd'
+    'otherButtons otherButtons otherButtons'
+    '... ... ...'
+    '... button ...';
+}
+
+.login .email {
+  grid-template-areas:
+    'title title title'
+    '... ... ...'
+    '... ... ...'
+    '... ... ...'
+    'log log log'
+    '... ... ...'
+    '... ... ...'
+    '... ... ...'
+    '... ... ...'
+    '... button ...';
+}
+
+.login .check {
+  grid-template-areas:
+    '... ... ...'
+    '... ... ...'
+    '... ... ...'
+    '... ... ...'
+    'title title title'
+    '... ... ...'
+    '... ... ...'
+    '... ... ...'
+    '... button ...';
+}
+
+.login .wrapperForm {
+  max-height: 350%;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'content';
+}
+
+.login .title {
+  text-align: center;
+  grid-area: title;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.login .loginerror {
+  grid-area: loginerror;
+  display: flex;
+  justify-content: center;
+}
+.login .loginerror > div {
+  text-align: center;
+  color: var(--color-error);
+}
+
+
+.login .reduce {
+  padding: 0 14px;
+}
+
+.login .log {
+  grid-area: log;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.login .pwd {
+  grid-area: pwd;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.login .button {
+  margin-bottom: -18%;
+  grid-area: button;
+  font-family: Quicksand;
+  font-size: 18px;
+  --color-primary: black;
+}
+
+.login .otherButtons {
+  grid-area: otherButtons;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 'remember remember ... forgot forgot';
+  font-size: 18px;
+}
+
+.login .remember {
+  grid-area: remember;
+  display:inline-flex;
+  margin-left: 1em;
+  color:#454545;
+}
+
+#checkboxRemember {
+  margin-top:1.2em;
+}
+
+.login .forgot {
+  grid-area: forgot;
+  margin-left: 1.5em;
+  text-decoration: underline;
+}
+
+.login #forgotLink {
+  color:#454545;
+}

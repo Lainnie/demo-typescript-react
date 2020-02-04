@@ -1,0 +1,197 @@
+.layoutBody {
+  height: 100%;
+  background: linear-gradient(
+    -45deg,
+    #bf145a,
+    #493757,
+    #14496a,
+    #493757,
+    #bf145a
+  );
+  background-size: 400% 400%;
+  background-position: 0% 50%;
+  animation: backgroundTransition 70s ease infinite;
+  -webkit-animation: backgroundTransition 70s ease infinite;
+}
+
+.layoutLogin {
+  height: 100%;
+  max-width: 1630px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  overflow-y: hidden;
+  grid-gap: 14px;
+  grid-template-columns: repeat(6, var(--grid-column-size));
+  grid-template-areas: 'wrapperLogin wrapperLogin wrapperLogin wrapperLogin wrapperLogin wrapperLogin';
+}
+
+.wrapperLogin {
+  z-index: 1;
+  height: 100%;
+  max-width: 1630px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  position: relative;
+  grid-area: wrapperLogin;
+  grid-gap: 0px;
+  grid-template-columns: repeat(6, 260px);
+  grid-template-areas:
+    '... ... hbande hbande ... ...'
+    '... ... hbande hbande ... ...'
+    '... ... wrapperlogo wrapperlogo ... ...'
+    '... ... login login ... ...'
+    '... ... login login ... ...'
+    '... ... ... ... ... ...'
+    '... ... ... ... ... ...'
+    '... ... ... ... ... ...'
+    '... ... ... ... ... ...';
+}
+
+.wrapperbannertop .bannertop {
+  position: absolute;
+  height: 2000px;
+}
+
+.wrapperbannertop {
+  position: relative;
+  grid-area: hbande;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: '... bannertop bannertop ...';
+}
+
+.wrapperbannerbottom {
+  grid-area: bbande;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-gap: 14px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    '... bannerbottom bannerbottom ...'
+    '... bannerbottom bannerbottom ...';
+}
+
+.wrapperLogo {
+  z-index: 1;
+  grid-area: wrapperlogo;
+  width: 100%;
+  height:10em;
+  padding-top:5em;
+  text-align: center;
+  display: grid;
+  grid-gap: 14px;
+  grid-area: wrapperlogo;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: '... logo logo ...';
+}
+
+.bannertop {
+  grid-area: bannertop;
+  background-color:rgba(255, 255, 255, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.bannerbottom {
+  grid-area: bannerbottom;
+  width: 100%;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.layoutBody path, rect, circle {
+  stroke: white;
+  stroke-width: 2px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: textAnimation 5s linear forwards;
+}
+
+.layoutBody polygon {
+  stroke: white;
+  stroke-width: 4px;
+  fill: white;
+}
+
+@keyframes backgroundTransition {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 1000;
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+@media screen and (max-width: 1644px) {
+  .layoutLogin {
+    max-width: 1082px;
+    grid-template-columns: repeat(4, var(--grid-column-size));
+    grid-template-areas:
+      'wrapperLogin wrapperLogin wrapperLogin wrapperLogin'
+      'wrapperLogin wrapperLogin wrapperLogin wrapperLogin'
+      'wrapperLogin wrapperLogin wrapperLogin wrapperLogin';
+  }
+
+  .wrapperLogin {
+    grid-template-columns: repeat(4, var(--grid-column-size));
+    grid-template-areas:
+      '... hbande hbande ...'
+      '... hbande hbande ...'
+      '... wrapperlogo wrapperlogo ...'
+      '... login login ...'
+      '... login login ...'
+      '... bbande bbande ...'
+      '... bbande bbande ...'
+      '... bbande bbande ...'
+      '... bbande bbande ...';
+  }
+}
+
+@media screen and (max-width: 1082px) {
+  .layoutLogin {
+    max-width: 534px;
+    grid-template-columns: repeat(2, var(--grid-column-size));
+    grid-template-areas:
+      'wrapperLogin wrapperLogin'
+      'wrapperLogin wrapperLogin'
+      'wrapperLogin wrapperLogin';
+  }
+  .wrapperLogin {
+    grid-template-columns: repeat(2, var(--grid-column-size));
+    grid-template-areas:
+      'hbande hbande'
+      'hbande hbande'
+      'wrapperlogo wrapperlogo'
+      'login login'
+      'login login'
+      'bbande bbande'
+      'bbande bbande'
+      'bbande bbande'
+      'bbande bbande';
+  }
+}

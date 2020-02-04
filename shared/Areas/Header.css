@@ -1,0 +1,20 @@
+.layout-connected .area-header {
+  background-color: #fbfbfb;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.layout-connected .area-header .area-header-left {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.layout-connected .area-header .area-header-right {
+  grid-column: 4 / span 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

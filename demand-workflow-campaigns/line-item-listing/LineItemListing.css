@@ -1,0 +1,59 @@
+.layout-connected .line-item-listing {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .line-item-listing .button-actions {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: var(--grid-gap-size);
+}
+
+.layout-connected
+  .line-item-listing
+  .button-actions
+  demeter-button:first-child {
+  grid-column: 3 / 4;
+  padding-right: var(--grid-gap-size);
+}
+
+.layout-connected .line-item-listing .data-table {
+  margin-bottom: 20px;
+}
+
+.layout-connected .line-item-listing .button-actions demeter-button:last-child {
+  grid-column: 4 / 5;
+  padding-left: var(--grid-gap-size);
+}
+
+.layout-connected .line-item-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.layout-connected .line-item-cell .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.layout-connected .line-item-cell .right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.layout-connected .line-item-cell .fa-times {
+  cursor: pointer;
+}
+
+.layout-connected .line-item-listing .line-item-cell a {
+  margin-right: 18px;
+  text-decoration: underline;
+  cursor: pointer;
+}

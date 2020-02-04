@@ -1,0 +1,1 @@
+export { default as ShelvesProductsTree } from './ShelvesProductsTree';

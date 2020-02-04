@@ -1,0 +1,90 @@
+.layout-connected .campaign-form {
+  grid-column: 1 / 7;
+}
+
+.layout-connected .campaign-form .inputs {
+  display: grid;
+  grid-gap: var(--grid-gap-size);
+  grid-template-rows: repeat(2, fit-content(100%));
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.layout-connected .campaign-form .inputs .demeter-cartridge-group {
+  grid-column: 1 / 13;
+  display: grid;
+  grid-gap: var(--grid-gap-size);
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 10px;
+}
+
+.layout-connected .campaign-form .inputs .cartridge-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-connected
+  .campaign-form
+  .inputs
+  .cartridge-item
+  demeter-cartridge-item {
+  width: 100%;
+}
+
+.layout-connected .campaign-form .inputs .cartridge-item .hack-on-click {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.layout-connected .campaign-form .inputs .brand-items {
+  display: grid;
+  grid-gap: var(--grid-gap-size);
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+}
+
+.layout-connected .campaign-form .inputs demeter-input-text[identifier='name'] {
+  grid-column: 10 / 13;
+}
+
+.layout-connected
+  .campaign-form
+  .inputs
+  demeter-input-text[identifier='global_budget'] {
+  grid-column: 7 / 10;
+}
+
+.layout-connected .campaign-form .inputs #country {
+  grid-column: 1 / 4;
+}
+
+.layout-connected .campaign-form .inputs #brand {
+  grid-column: 4 / 7;
+}
+
+.layout-connected .campaign-form .inputs demeter-input-text[identifier='name'],
+.layout-connected
+  .campaign-form
+  .inputs
+  demeter-input-text[identifier='globalBudget'],
+.layout-connected
+  .campaign-form
+  .inputs
+  demeter-input-text[identifier='country'] {
+  padding: 0 var(--grid-gap-size);
+}
+
+.layout-connected .campaign-form .inputs demeter-input-text:first-child {
+  padding-left: 0;
+}
+
+.layout-connected .campaign-form .inputs demeter-input-text:last-child {
+  padding-right: 0;
+}

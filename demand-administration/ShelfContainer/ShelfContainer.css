@@ -1,0 +1,63 @@
+.shelfComp {
+
+}
+
+.shelfComp.level-1:nth-child(2n+1) {
+  background-color: white;
+}
+.shelfComp.level-1:nth-child(2n) {
+  background-color: rgba(247, 247, 247, 1);
+}
+
+.shelfComp.isOpen {
+  /* Nothing yet */
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  padding: 11px 17px;
+}
+
+.head:focus {
+  outline: none;
+  box-shadow: 3px 0px 1px inset var(--color-grey-1-a70);
+}
+
+.shelfComp.level-1 > .head {
+  border-style: solid;
+  border-width: 1px;
+  border-color:  var(--color-grey-1-a50);
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.shelfComp i.fal {
+  margin-right: 10px;
+}
+
+.body {
+  padding: 0 0 0 37px;
+  display: flex;
+  flex-direction: column;
+}
+.shelfComp.isOpen > .body {
+  display: block;
+}
+.shelfComp.isClosed > .body {
+  display: none;
+}
+
+.mProductList {
+  display: flex;
+  flex-direction: column;
+}
+
+.mProduct {
+  padding: 11px 0px;
+}
+
+.childrenShelvesList {
+  display: flex;
+  flex-direction: column;
+}
